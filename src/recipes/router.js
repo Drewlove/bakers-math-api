@@ -7,6 +7,7 @@ const logger = require("../logger");
 const endpointRouter = express.Router();
 const jsonParser = express.json();
 //REWRITE, include each row from table
+
 const serializeRow = (row) => ({
   recipe_id: row.recipe_id,
   recipe_name: xss(row.recipe_name),
@@ -26,11 +27,9 @@ endpointRouter
   .route("/")
   .get((req, res, next) => {
     const knexInstance = req.app.get("db");
-    console.log(knexInstance);
     endpointService
       .getAllRows(knexInstance)
       .then((rows) => {
-        console.log(rows);
         res.json(rows.map(serializeRow));
       })
       .catch(next);
