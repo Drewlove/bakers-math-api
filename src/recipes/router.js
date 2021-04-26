@@ -10,14 +10,14 @@ const jsonParser = express.json();
 const serializeRow = (row) => ({
   recipe_id: row.recipe_id,
   recipe_name: xss(row.recipe_name),
-  // flour_total: xss(row.flour_total),
-  // flours: row.flours,
-  // ingredients: row.ingredients,
+  flour_total: xss(row.flour_total),
+  flours: row.flours,
+  ingredients: row.ingredients,
 });
 
 const table = {
   name: "recipe",
-  // columns: ["recipe_name", "flour_total", "flours", "ingredients"],
+  columns: ["recipe_name", "flour_total", "flours", "ingredients"],
   columns: ["recipe_name"],
   rowId: "recipe_id",
 };
@@ -35,15 +35,10 @@ endpointRouter
       })
       .catch(next);
   })
-  // .get((req, res) => {
-  //   res.json({ ok: true });
-  // })
 
   .post(jsonParser, (req, res, next) => {
-    // const { recipe_name, flour_total, flours, ingredients } = req.body;
-    // const newRow = { recipe_name, flour_total, flours, ingredients };
-    const { recipe_name } = req.body;
-    const newRow = { recipe_name };
+    const { recipe_name, flour_total, flours, ingredients } = req.body;
+    const newRow = { recipe_name, flour_total, flours, ingredients };
 
     for (const [key, value] of Object.entries(newRow))
       if (value == null)
@@ -91,10 +86,8 @@ endpointRouter
   })
   .patch(jsonParser, (req, res, next) => {
     //REWRITE, use table's column names
-    // const { recipe_name, flour_total, flours, ingredients } = req.body;
-    // const rowToUpdate = { recipe_name, flour_total, flours, ingredients };
-    const { recipe_name } = req.body;
-    const newRow = { recipe_name };
+    const { recipe_name, flour_total, flours, ingredients } = req.body;
+    const rowToUpdate = { recipe_name, flour_total, flours, ingredients };
 
     const numberOfValues = Object.values(rowToUpdate).filter(Boolean).length;
     if (numberOfValues === 0)
