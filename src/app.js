@@ -30,9 +30,6 @@ app.use(helmet());
 
 app.use(validateBearerToken);
 app.use("/api/recipes", recipesRouter);
-// app.use("/api/articles", articlesRouter);
-// app.use("/api/comments", commentsRouter);
-// app.use("/api/boilerplate-endpoints", boilerplateRouter);
 
 //Open heroku url in browser, see if {ok: true} appears
 app.get("/TEST", (req, res) => {
@@ -42,6 +39,7 @@ app.get("/TEST", (req, res) => {
 app.use(function errorHandler(error, req, res, next) {
   let response;
   if (NODE_ENV === "production") {
+    console.error(error);
     response = { error: "Server error" };
   } else {
     console.error(error);
