@@ -23,7 +23,15 @@ const service = {
       });
   },
   updateRow(knex, row_id, newFields) {
-    return knex(table.name).where(`${table.name}_id`, row_id).update(newFields);
+    const { recipe_name, flour_total, flours, ingredients } = newFields;
+    return knex(table.name)
+      .where(`${table.name}_id`, row_id)
+      .update({
+        recipe_name: recipe_name,
+        flour_total: flour_total,
+        flours: JSON.stringify(flours),
+        ingredients: JSON.stringify(ingredients),
+      });
   },
   deleteRow(knex, row_id) {
     return knex(table.name).where(`${table.name}_id`, row_id).delete();

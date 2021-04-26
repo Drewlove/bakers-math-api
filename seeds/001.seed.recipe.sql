@@ -7,23 +7,11 @@ VALUES
   (
     'sourdough',
     1000.00,
-    '[{"name": "High protein bread flour, malted", "percent": "80"}, {"name": "Whole wheat flour", "percent":"20"}]',
-    '[{"name": "water", "percent":"76"}, {"name":"salt", "percent":"1.9"}, {"name":"sourdough starter", "percent" : "0.8"}]'),
+    '[{"name": "High protein bread flour, malted", "percent": "80", "id": "1"}, {"name": "Whole wheat flour", "percent":"20", "id": "2"}]',
+    '[{"name": "water", "percent":"76", "id": "3"}, {"name":"salt", "percent":"1.9", "id": "4"}, {"name":"sourdough starter", "percent" : "0.8", "id": "5"}]'),
   (
     'other',
     800.00,
-    '[{"name": "Whole Wheat", "percent": "40"}, {"name": "White", "percent":"60"}]',
-    '[{"name": "water", "percent":"70"}, {"name":"salt", "percent":"1.5"}, {"name":"honey", "percent" : "5"}]');
-
-
-
--- INSERT INTO recipe
---   (recipe_name, flour_total, flours, ingredients)
--- VALUES(
---     'test',
---     100.00,
---     '[{"name": "bulgur", "percent": "1000"}]',
---     '[{"name": "water", "percent":"70"}, {"name":"salt", "percent":"1.5"}, {"name":"honey", "percent" : "5"}]');
-    
-
+    '[{"name": "Whole Wheat", "percent": "40", "id": "6"}, {"name": "White", "percent":"60", "id": "7"}]',
+    '[{"name": "water", "percent":"70", "id": "8"}, {"name":"salt", "percent":"1.5", "id": "9" }, {"name":"honey", "percent" : "5", "id": "10"}]');
 

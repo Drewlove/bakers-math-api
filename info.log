@@ -1,20 +1,13 @@
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
-{"message":"Unauthorized request to path: /api/recipes","level":"error"}
+{"message":{"recipe_name":"sourdough","flour_total":"1000.00","flours":[{"name":"High protein bread flour, malted","percent":"80","id":"High protein bread flour, malted-80"},{"name":"Whole wheat flour","percent":"20","id":"Whole wheat flour-20"}],"ingredients":[{"name":"water","percent":"76","id":"water-76"},{"name":"salt","percent":"1.9","id":"salt-1.9"},{"name":"sourdough starter","percent":"0.8","id":"sourdough starter-0.8"}]},"level":"info"}
+{"message":{"recipe_name":"sourdough","flour_total":"1000.00","flours":[{"name":"High protein bread flour, malted","percent":"80","id":"High protein bread flour, malted-80"},{"name":"Whole wheat flour","percent":"20","id":"Whole wheat flour-20"}],"ingredients":[{"name":"water","percent":"76","id":"water-76"},{"name":"salt","percent":"1.9","id":"salt-1.9"},{"name":"sourdough starter","percent":"0.8","id":"sourdough starter-0.8"}]},"level":"info"}
+{"message":{"recipe_name":"sourdough","flour_total":"1000.00"},"level":"info"}
+{"message":{"recipe_name":"Stuff","flour_total":"1000.00"},"level":"info"}
+{"message":{"recipe_name":"Things","flour_total":"1000.00"},"level":"info"}
+{"message":{"recipe_name":"Sourdough","flour_total":"1000.00"},"level":"info"}
+{"message":{"recipe_name":"Sourdough New","flour_total":"1000.00","flours":[{"name":"High protein bread flour, malted","percent":"80","id":"High protein bread flour, malted-80"},{"name":"Whole wheat flour","percent":"20","id":"Whole wheat flour-20"}],"ingredients":[{"name":"water","percent":"76","id":"water-76"},{"name":"salt","percent":"1.9","id":"salt-1.9"},{"name":"sourdough starter","percent":"0.8","id":"sourdough starter-0.8"}]},"level":"info"}
+{"message":{"recipe_name":"Sourdough Test","flour_total":"1000.00"},"level":"info"}
+{"message":{"recipe_name":"Sourdough Test","flour_total":"1000.00"},"level":"info"}
+{"message":{"recipe_name":"Sourdough Test One","flour_total":"1000.00","flours":[{"name":"High protein bread flour, malted","percent":"80","id":"High protein bread flour, malted-80"},{"name":"Whole wheat flour","percent":"20","id":"Whole wheat flour-20"}]},"level":"info"}
+{"message":{"recipe_name":"Sourdough Test One","flour_total":"1000.00","flours":[{"name":"High protein bread flour, malted","percent":"80","id":"High protein bread flour, malted-80"},{"name":"Whole wheat flour","percent":"20","id":"Whole wheat flour-20"}]},"level":"info"}
+{"message":{"recipe_name":"sourdough","flour_total":"1000.01","flours":[{"name":"High protein bread flour, malted","percent":"80","id":"1"},{"name":"Whole wheat flwer","percent":"20","id":"2"}],"ingredients":[{"name":"water","percent":"76","id":"3"},{"name":"salt","percent":"1.9","id":"4"},{"name":"sourdough starter","percent":"0.8","id":"5"}]},"level":"info"}
+{"message":{"recipe_name":"sourdough","flour_total":"1000.01","flours":[{"name":"High protein bread flour, malted","percent":"80","id":"1"},{"name":"Whole wheat flwer","percent":"20","id":"2"}],"ingredients":[{"name":"waters","percent":"76","id":"3"},{"name":"salt","percent":"1.9","id":"4"},{"name":"sourdough starter","percent":"0.8","id":"5"}]},"level":"info"}

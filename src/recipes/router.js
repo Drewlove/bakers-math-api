@@ -85,8 +85,11 @@ endpointRouter
   })
   .patch(jsonParser, (req, res, next) => {
     //REWRITE, use table's column names
+    // const { recipe_name, flour_total, flours, ingredients } = req.body;
+    // const rowToUpdate = { recipe_name, flour_total, flours, ingredients };
     const { recipe_name, flour_total, flours, ingredients } = req.body;
     const rowToUpdate = { recipe_name, flour_total, flours, ingredients };
+    logger.info(rowToUpdate);
 
     const numberOfValues = Object.values(rowToUpdate).filter(Boolean).length;
     if (numberOfValues === 0)
