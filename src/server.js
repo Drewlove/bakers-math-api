@@ -8,7 +8,7 @@ const productionDB = knex({
   client: "pg",
   connection: {
     connectionString: DATABASE_URL,
-    ssl: true,
+    // ssl: true,
   },
 });
 
