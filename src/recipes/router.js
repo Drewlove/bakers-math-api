@@ -10,9 +10,9 @@ const jsonParser = express.json();
 const serializeRow = (row) => ({
   recipe_id: row.recipe_id,
   recipe_name: xss(row.recipe_name),
-  flour_total: xss(row.flour_total),
-  flours: row.flours,
-  ingredients: row.ingredients,
+  // flour_total: xss(row.flour_total),
+  // flours: row.flours,
+  // ingredients: row.ingredients,
 });
 
 const table = {
@@ -24,18 +24,20 @@ const table = {
 
 endpointRouter
   .route("/")
-  // .get((req, res, next) => {
-  //   const knexInstance = req.app.get("db");
-  //   endpointService
-  //     .getAllRows(knexInstance)
-  //     .then((rows) => {
-  //       res.json(rows.map(serializeRow));
-  //     })
-  //     .catch(next);
-  // })
-  .get((req, res) => {
-    res.json({ ok: true });
+  .get((req, res, next) => {
+    const knexInstance = req.app.get("db");
+    console.log(knexInstance);
+    endpointService
+      .getAllRows(knexInstance)
+      .then((rows) => {
+        console.log(rows);
+        res.json(rows.map(serializeRow));
+      })
+      .catch(next);
   })
+  // .get((req, res) => {
+  //   res.json({ ok: true });
+  // })
 
   .post(jsonParser, (req, res, next) => {
     // const { recipe_name, flour_total, flours, ingredients } = req.body;
