@@ -131,7 +131,7 @@ app.use("/api/departments", departmentsRouter);
    \*hobby-dev is the heroku plan
 2. Connect to the client `psql <connection url>`
 
-- In the place of the `<connection url>` type the actual connection url. To get the url, type ``and look for the string after the`connection url:`it should read something like`postgres://very_long_string_numbers_etc.`
+- In the place of the `<connection url>` type the actual connection url. To get the url, type `heroku pg:credentials:url` and look for the string after the `connection url:` it should read something like `postgres://very_long_string_numbers_etc.`
 
 3. You can connect to the heroku database, and run psql commands, with `heroku pg:psql`
 4. Migrate the database, `npm run migrate:production`.  

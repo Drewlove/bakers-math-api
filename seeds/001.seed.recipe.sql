@@ -16,3 +16,14 @@ VALUES
     '[{"name": "water", "percent":"70"}, {"name":"salt", "percent":"1.5"}, {"name":"honey", "percent" : "5"}]');
 
 
+
+-- INSERT INTO recipe
+--   (recipe_name, flour_total, flours, ingredients)
+-- VALUES(
+--     'test',
+--     100.00,
+--     '[{"name": "bulgur", "percent": "1000"}]',
+--     '[{"name": "water", "percent":"70"}, {"name":"salt", "percent":"1.5"}, {"name":"honey", "percent" : "5"}]');
+    
+
+
