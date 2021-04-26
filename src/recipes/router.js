@@ -22,18 +22,17 @@ const table = {
   rowId: "recipe_id",
 };
 
-endpointRouter.route("/");
-// .get((req, res, next) => {
-//   const knexInstance = req.app.get("db");
-//   endpointService
-//     .getAllRows(knexInstance)
-//     .then((rows) => {
-//       res.json(rows.map(serializeRow));
-//     })
-//     .catch(next);
-// })
-
-app
+endpointRouter
+  .route("/")
+  // .get((req, res, next) => {
+  //   const knexInstance = req.app.get("db");
+  //   endpointService
+  //     .getAllRows(knexInstance)
+  //     .then((rows) => {
+  //       res.json(rows.map(serializeRow));
+  //     })
+  //     .catch(next);
+  // })
   .get((req, res) => {
     res.json({ ok: true });
   })
