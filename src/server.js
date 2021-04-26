@@ -1,8 +1,10 @@
 const knex = require("knex");
 const app = require("./app");
-const { PORT, DATABASE_URL } = require("./config");
+const { PORT, DATABASE_URL, NODE_ENV } = require("./config");
 
-const db = knex({
+let database;
+
+const productionDB = knex({
   client: "pg",
   connection: {
     connectionString: DATABASE_URL,
@@ -10,7 +12,16 @@ const db = knex({
   },
 });
 
-app.set("db", db);
+const testDB = knex({
+  client: "pg",
+  connection: {
+    connectionString: DATABASE_URL,
+  },
+});
+
+NODE_ENV === "production" ? (database = productionDB) : (database = testDB);
+
+app.set("db", database);
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
