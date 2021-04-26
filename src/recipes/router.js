@@ -22,17 +22,22 @@ const table = {
   rowId: "recipe_id",
 };
 
-endpointRouter
-  .route("/")
-  .get((req, res, next) => {
-    const knexInstance = req.app.get("db");
-    endpointService
-      .getAllRows(knexInstance)
-      .then((rows) => {
-        res.json(rows.map(serializeRow));
-      })
-      .catch(next);
+endpointRouter.route("/");
+// .get((req, res, next) => {
+//   const knexInstance = req.app.get("db");
+//   endpointService
+//     .getAllRows(knexInstance)
+//     .then((rows) => {
+//       res.json(rows.map(serializeRow));
+//     })
+//     .catch(next);
+// })
+
+app
+  .get((req, res) => {
+    res.json({ ok: true });
   })
+
   .post(jsonParser, (req, res, next) => {
     // const { recipe_name, flour_total, flours, ingredients } = req.body;
     // const newRow = { recipe_name, flour_total, flours, ingredients };

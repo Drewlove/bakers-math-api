@@ -12,6 +12,8 @@ VALUES
 -- '[{"name": "water", "percent":"76"}, {"name":"salt", "percent":"1.9"}, {"name":"sourdough starter", "percent" : "0.8"}]'),
 (
     'other'
-    -- 800.00,
-    -- '[{"name": "Whole Wheat", "percent": "40"}, {"name": "White", "percent":"60"}]',
-    -- '[{"name": "water", "percent":"70"}, {"name":"salt", "percent":"1.5"}, {"name":"honey", "percent" : "5"}]');
+-- 800.00,
+-- '[{"name": "Whole Wheat", "percent": "40"}, {"name": "White", "percent":"60"}]',
+-- '[{"name": "water", "percent":"70"}, {"name":"salt", "percent":"1.5"}, {"name":"honey", "percent" : "5"}]');
+
+
