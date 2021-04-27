@@ -2,7 +2,7 @@ TRUNCATE recipe RESTART
 IDENTITY CASCADE;
 
 INSERT INTO recipe
-  (recipe_name, unit_weight, flour_total, flours, ingredients)
+  (recipe_name, flour_total, unit_weight, flours, ingredients)
 VALUES
   (
     'sourdough',
