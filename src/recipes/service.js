@@ -14,13 +14,22 @@ const service = {
       .first();
   },
   insertRow(knex, newRow) {
-    return knex
-      .insert(newRow)
-      .into(table.name)
-      .returning("*")
-      .then((rows) => {
-        return rows[0];
-      });
+    const { recipe_name, flour_total, flours, ingredients } = newRow;
+    return (
+      knex
+        // .insert(newRow)
+        .insert({
+          recipe_name: recipe_name,
+          flour_total: flour_total,
+          flours: JSON.stringify(flours),
+          ingredients: JSON.stringify(ingredients),
+        })
+        .into(table.name)
+        .returning("*")
+        .then((rows) => {
+          return rows[0];
+        })
+    );
   },
   updateRow(knex, row_id, newFields) {
     const { recipe_name, flour_total, flours, ingredients } = newFields;

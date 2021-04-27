@@ -84,7 +84,7 @@ endpointRouter
       .catch(next);
   })
   .patch(jsonParser, (req, res, next) => {
-    //REWRITE, use table's column names
+    //REWRITE, use table's column namesre
     const { recipe_name, flour_total, flours, ingredients } = req.body;
     const rowToUpdate = { recipe_name, flour_total, flours, ingredients };
     logger.info(rowToUpdate);
