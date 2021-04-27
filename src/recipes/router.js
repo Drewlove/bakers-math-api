@@ -10,6 +10,7 @@ const jsonParser = express.json();
 
 const serializeRow = (row) => ({
   recipe_id: row.recipe_id,
+  unit_weight: row.unit_weight,
   recipe_name: xss(row.recipe_name),
   flour_total: xss(row.flour_total),
   flours: row.flours,
@@ -18,7 +19,13 @@ const serializeRow = (row) => ({
 
 const table = {
   name: "recipe",
-  columns: ["recipe_name", "flour_total", "flours", "ingredients"],
+  columns: [
+    "recipe_name",
+    "flour_total",
+    "unit_weight",
+    "flours",
+    "ingredients",
+  ],
   columns: ["recipe_name"],
   rowId: "recipe_id",
 };
@@ -36,8 +43,20 @@ endpointRouter
   })
 
   .post(jsonParser, (req, res, next) => {
-    const { recipe_name, flour_total, flours, ingredients } = req.body;
-    const newRow = { recipe_name, flour_total, flours, ingredients };
+    const {
+      recipe_name,
+      flour_total,
+      unit_weight,
+      flours,
+      ingredients,
+    } = req.body;
+    const newRow = {
+      recipe_name,
+      flour_total,
+      unit_weight,
+      flours,
+      ingredients,
+    };
 
     for (const [key, value] of Object.entries(newRow))
       if (value == null)

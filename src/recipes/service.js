@@ -14,30 +14,41 @@ const service = {
       .first();
   },
   insertRow(knex, newRow) {
-    const { recipe_name, flour_total, flours, ingredients } = newRow;
-    return (
-      knex
-        // .insert(newRow)
-        .insert({
-          recipe_name: recipe_name,
-          flour_total: flour_total,
-          flours: JSON.stringify(flours),
-          ingredients: JSON.stringify(ingredients),
-        })
-        .into(table.name)
-        .returning("*")
-        .then((rows) => {
-          return rows[0];
-        })
-    );
+    const {
+      recipe_name,
+      flour_total,
+      unit_weight,
+      flours,
+      ingredients,
+    } = newRow;
+    return knex
+      .insert({
+        recipe_name: recipe_name,
+        flour_total: flour_total,
+        unit_weight: unit_weight,
+        flours: JSON.stringify(flours),
+        ingredients: JSON.stringify(ingredients),
+      })
+      .into(table.name)
+      .returning("*")
+      .then((rows) => {
+        return rows[0];
+      });
   },
   updateRow(knex, row_id, newFields) {
-    const { recipe_name, flour_total, flours, ingredients } = newFields;
+    const {
+      recipe_name,
+      flour_total,
+      unit_weight,
+      flours,
+      ingredients,
+    } = newFields;
     return knex(table.name)
       .where(`${table.name}_id`, row_id)
       .update({
         recipe_name: recipe_name,
         flour_total: flour_total,
+        unit_weight: unit_weight,
         flours: JSON.stringify(flours),
         ingredients: JSON.stringify(ingredients),
       });
